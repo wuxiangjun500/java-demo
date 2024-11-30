@@ -1,0 +1,14 @@
+dubbo:
+  registry:
+    address: nacos://${nacos.address:127.0.0.1}:8848?username=nacos&password=${nacos.password}
+    register-mode: instance
+  protocol:
+#    name: dubbo
+    name: tri
+    port: 50051
+  qos:
+    enable: false
+  application:
+    name: dubbo-producer
+    logger: slf4j
+    qos-enable: false

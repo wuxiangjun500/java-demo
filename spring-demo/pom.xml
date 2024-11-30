@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>dubbo-demo</module>
+        <module>redis-demo</module>
+        <module>dubbo-demo/dubbo-api</module>
     </modules>
 
     <properties>
