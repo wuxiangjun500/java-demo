@@ -7,7 +7,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ConsumerService {
-    @DubboReference(scope = "remote")
+
+    // 必须指定服务名，如果没有metadata的话
+    @DubboReference(providedBy = "dubbo-producer", retries = 0, timeout = 1000)
     public UserService userService;
 
     public UserInfoDTO getUser() {
